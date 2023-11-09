@@ -3,15 +3,20 @@ package main
 import "fmt"
 
 func main() {
-	var username, password string
+	var num1, num2, num3 int
+	fmt.Println("Enter three integers (seperated by space" +
+		"or newline):")
 
-	fmt.Println("Enter username and password (separated" +
-		"by space or newline): ")
+	fmt.Scan(&num1, &num2, &num3)
+	fmt.Print("Largest number: ")
+	result := num1
 
-	fmt.Scan(&username, &password)
-	if username == "admin" && password == "password123" {
-		fmt.Println("Login successful.")
-	} else {
-		fmt.Println("Login failed.")
+	if num2 > result {
+		result = num2
 	}
+	if num3 > result {
+		result = num3
+	}
+
+	fmt.Println(result)
 }
