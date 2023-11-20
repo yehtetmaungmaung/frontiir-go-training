@@ -8,7 +8,6 @@ func main() {
 		"or newline):")
 
 	fmt.Scan(&num1, &num2, &num3)
-	fmt.Print("Largest number: ")
 	result := num1
 
 	if num2 > result {
@@ -18,5 +17,5 @@ func main() {
 		result = num3
 	}
 
-	fmt.Println(result)
+	fmt.Println("Largest number:", result)
 }
