@@ -64,11 +64,11 @@ func main() {
 	answers := make(map[string]map[string]int)
 
 	for subject, sid := range data {
-		for i, mark := range sid {
-			if answers[i] == nil {
-				answers[i] = map[string]int{}
+		for sid, mark := range sid {
+			if _, ok := answers[sid]; !ok {
+				answers[sid] = map[string]int{}
 			}
-			answers[i][subject] = mark
+			answers[sid][subject] = mark
 		}
 	}
 
