@@ -9,7 +9,7 @@ import (
 	"fmt"
 )
 
-func divideWithRemainder(x, y int) (int, int, error) {
+func divideWithRemainder(x, y int) (quotient, remainder int, err error) {
 	if y == 0 {
 		return 0, 0, errors.New("Cannot divide by zero.")
 	} else {
@@ -18,7 +18,7 @@ func divideWithRemainder(x, y int) (int, int, error) {
 }
 
 func main() {
-	quotient, remainder, err := divideWithRemainder(13, 20)
+	quotient, remainder, err := divideWithRemainder(13, 10)
 	if err != nil {
 		fmt.Println(err)
 	} else {
